@@ -33,6 +33,12 @@ export default {
     const { reports } = await reportResponse.json()
 
     this.users = users
+
+    this.users.forEach(({ sessions }, idx) => {
+      sessions = sessions.map((session) => new Date(session))
+      this.users[idx].lastSession = Math.max(...sessions)
+    })
+
     this.reports = reports.map(({ category, total }) => ({
       tag: category,
       value: total,

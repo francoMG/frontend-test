@@ -9,6 +9,9 @@ module.exports = {
         'app-background': '#F7FAFC',
         'app-disabled': '#718096',
         'app-disabled-2': '#A0AEC0',
+        'app-success': '#3CC13B',
+        'app-error': '#F03738',
+        'app-title': '#4A5568',
       },
       borderRadius: {
         app: '5px',
