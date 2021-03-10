@@ -1,7 +1,9 @@
 <template>
   <div class="flex-1 flex flex-col relative">
     <div class="flex flex-col">
-      <h1 class="text-lg tracking-wide">Why do you create a startup?</h1>
+      <h1 class="text-lg tracking-wide text-app-title">
+        Why do you create a startup?
+      </h1>
       <sub class="text-app-disabled-2 text-base tracking-wide">Trends</sub>
     </div>
     <div class="m-auto pt-14">
