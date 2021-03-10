@@ -17,7 +17,7 @@
     <button class="ml-auto mr-6">
       <img
         class="rounded-full border-2 border-white w-10 h-10"
-        src="@/assets/profile.png"
+        src="@/assets/images/profile.png"
         alt="profile"
       />
     </button>
@@ -29,6 +29,10 @@ export default {
   data() {
     return {
       routes: [
+        {
+          to: '/#',
+          title: 'Menu',
+        },
         {
           to: '/#',
           title: 'Menu',
