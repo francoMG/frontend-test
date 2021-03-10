@@ -72,7 +72,7 @@ body,
 
 .route {
   grid-area: route;
-  @apply text-app-disabled py-6 px-5 font-medium;
+  @apply text-app-disabled py-6 px-4 font-medium;
 }
 
 .chart {
