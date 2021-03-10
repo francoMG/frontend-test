@@ -7,9 +7,11 @@ module.exports = {
       colors: {
         'app-blue': '#1E1ADD',
         'app-background': '#F7FAFC',
+        'app-disabled': '#718096',
       },
       borderRadius: {
         app: '5px',
+        'app-2': '8px',
       },
     },
   },
