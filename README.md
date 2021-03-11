@@ -8,6 +8,12 @@ Here are a few things I stumbled upon:
 - I couldn't find the icon package that you used. To make it as similar as possible, I put similar images.
 - Lastly, I used vue-chartjs for the pie chart. I hadn't used it before, but it wasn't very complicated either.
 
+## Final result
+
+<p align="center" width="100%" style="margin: 20px 0;">
+  <img width="90%" src="https://raw.githubusercontent.com/francoMG/frontend-test/main/demo.gif"> 
+</p>
+
 ---
 # Test Frontend Junior Developer
 
