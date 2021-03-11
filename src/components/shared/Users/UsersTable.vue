@@ -13,13 +13,10 @@
       <tbody>
         <tr class="border-t" v-for="user in users" v-bind:key="user.id">
           <td class="flex items-center">
-            <!-- 
-              error: server response with not found for profile photos 
-              :src="user.profile_img"
-            -->
             <img
               class="rounded-full w-5 h-5 m-3"
-              src="@/assets/icons/user.png"
+              :src="user.profile_img"
+              @error="onImageError"
               alt="user"
             />
             <div>
@@ -61,6 +58,8 @@
 </template>
 
 <script>
+import UserImage from '@/assets/icons/user.png'
+
 const { format: formatDate } = new Intl.DateTimeFormat('en-ES', {
   dateStyle: 'long',
 })
@@ -74,6 +73,11 @@ export default {
       return ans
     },
     formatDate,
+    onImageError(image) {
+      image.onerror = ''
+      image.srcElement.src = UserImage
+      return true
+    },
   },
 }
 </script>
