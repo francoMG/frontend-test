@@ -1,5 +1,5 @@
 <template>
-  <div class="flex border rounded-app-2">
+  <div class="flex border rounded-app-3">
     <table class="table-auto text-xs w-full">
       <thead>
         <tr class="table-header">
@@ -46,7 +46,7 @@
             {{ user.status ? 'Active' : 'Inactive' }}
           </td>
           <td>
-            <button class="flex opacity-50 w-3">
+            <button class="flex w-3">
               <img
                 class="flex-1"
                 src="@/assets/icons/dropdown.png"

@@ -92,6 +92,6 @@ body,
 
 .chart,
 .users {
-  @apply flex p-4 shadow-lg bg-white rounded-app-2;
+  @apply flex p-4 shadow-lg bg-white rounded-app;
 }
 </style>

@@ -14,8 +14,9 @@ module.exports = {
         'app-title': '#4A5568',
       },
       borderRadius: {
-        app: '5px',
-        'app-2': '8px',
+        app: '4px',
+        'app-2': '5px',
+        'app-3': '8px',
       },
     },
   },
