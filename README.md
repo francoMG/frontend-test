@@ -1,3 +1,14 @@
+# Dev notes
+
+Hello! this repository is the solution to the test. 😄
+
+Here are a few things I stumbled upon:
+
+- I used an alternate image for 'profile_img' because it returned a 404 error. This is because faker.js no longer offers images for free: https://github.com/Marak/faker.js/issues/1046
+- I couldn't find the icon package that you used. To make it as similar as possible, I put similar images.
+- Lastly, I used vue-chartjs for the pie chart. I hadn't used it before, but it wasn't very complicated either.
+
+---
 # Test Frontend Junior Developer
 
 This is a test that we create to recruitment process of frontend junior developer for [Videsk](https://videsk.io).
