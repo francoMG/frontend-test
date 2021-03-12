@@ -1,6 +1,6 @@
 <template>
   <div class="flex border rounded-app-3">
-    <table class="table-auto text-xs w-full">
+    <table class="table-auto text-xs w-full dark:text-white">
       <thead>
         <tr class="table-header">
           <th class="p-4" style="width: 35%;">Employee</th>

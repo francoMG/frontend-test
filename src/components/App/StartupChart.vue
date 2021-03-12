@@ -1,12 +1,12 @@
 <template>
   <div class="flex-1 flex flex-col relative">
     <div class="flex flex-col">
-      <h1 class="text-lg tracking-wide text-app-title">
+      <h1 class="text-lg tracking-wide text-app-title dark:text-white">
         Why do you create a startup?
       </h1>
       <sub class="text-app-disabled-2 text-base tracking-wide">Trends</sub>
     </div>
-    <div class="m-auto pt-14">
+    <div class="m-auto pt-14 bg-white rounded-app">
       <PieChart
         :data="chartData"
         :options="chartOptions"

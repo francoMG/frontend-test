@@ -1,6 +1,6 @@
 <template>
-  <div id="app" class="bg-app-background p-7">
-    <Header />
+  <div id="app" class="bg-app-bg dark:bg-dark p-7">
+    <Header :toggle-theme="toggleTheme" />
     <div class="dashboard">
       <div class="route">
         Home /
@@ -43,6 +43,27 @@ export default {
       tag: category,
       value: total,
     }))
+
+    this.loadTheme()
+  },
+  methods: {
+    loadTheme() {
+      if (
+        localStorage.theme === 'dark' ||
+        (!('theme' in localStorage) &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+    },
+    toggleTheme() {
+      const { classList } = document.documentElement
+      if (classList.contains('dark')) localStorage.theme = ''
+      else localStorage.theme = 'dark'
+      classList.toggle('dark')
+    },
   },
   data() {
     return {
@@ -92,6 +113,6 @@ body,
 
 .chart,
 .users {
-  @apply flex p-4 shadow-lg bg-white rounded-app;
+  @apply flex p-4 shadow-lg bg-white dark:bg-dark-2 rounded-app;
 }
 </style>

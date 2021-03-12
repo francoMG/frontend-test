@@ -1,5 +1,7 @@
 <template>
-  <header class="flex items-center rounded-app-2 bg-app-blue text-white py-3">
+  <header
+    class="flex items-center rounded-app-2 bg-app-blue dark:bg-dark-2 text-white py-3"
+  >
     <h1 class="pl-8 font-bold text-2xl">
       LOGO
     </h1>
@@ -27,7 +29,7 @@
         class="absolute right-0 top-12"
         :style="`display: ${isDropdownOpen ? 'block' : 'none'};`"
       >
-        <Dropdown />
+        <Dropdown :toggle-theme="toggleTheme" />
       </div>
     </div>
   </header>
@@ -43,6 +45,7 @@ export default {
       this.isDropdownOpen = !this.isDropdownOpen
     },
   },
+  props: ['toggleTheme'],
   data() {
     return {
       isDropdownOpen: false,

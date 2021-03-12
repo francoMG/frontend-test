@@ -1,6 +1,8 @@
 <template>
   <div class="flex-1 flex flex-col">
-    <h1 class="text-lg tracking-wide pb-4 text-app-title">Employees</h1>
+    <h1 class="text-lg tracking-wide pb-4 text-app-title dark:text-white">
+      Employees
+    </h1>
     <UserTable :users="users" />
   </div>
 </template>
