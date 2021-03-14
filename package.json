@@ -29,6 +29,7 @@
     "eslint-plugin-vue": "^5.0.0",
     "faker": "^5.4.0",
     "miragejs": "^0.1.41",
+    "pre-commit": "^1.2.2",
     "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
@@ -60,5 +61,8 @@
     "> 1%",
     "last 2 versions"
   ],
-  "license": "LGPL-2.1"
+  "license": "LGPL-2.1",
+  "pre-commit": [
+    "test:unit"
+  ]
 }
