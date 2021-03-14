@@ -14,6 +14,16 @@ Here are a few things I stumbled upon:
   <img width="90%" src="https://raw.githubusercontent.com/francoMG/frontend-test/main/demo.gif"> 
 </p>
 
+## Tests
+
+On each pre-commit the unit tests are executed.
+
+Command to run tests: `npm run test:unit`
+
+<p align="center" width="100%" style="margin: 20px 0;">
+  <img width="90%" src="https://raw.githubusercontent.com/francoMG/frontend-test/main/test-demo.png"> 
+</p>
+
 ---
 # Test Frontend Junior Developer
 
