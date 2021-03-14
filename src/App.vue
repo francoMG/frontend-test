@@ -22,27 +22,15 @@
 import Header from '@/components/App/Header.vue'
 import StartupChart from '@/components/App/StartupChart.vue'
 import UsersDashboard from '@/components/App/UsersDashboard.vue'
+import { getUsers } from '@/services/UsersService.js'
+import { getReports } from '@/services/ReportsService.js'
 
 export default {
   name: 'app',
   components: { Header, UsersDashboard, StartupChart },
   async mounted() {
-    const userResponse = await fetch('/api/users')
-    const { users } = await userResponse.json()
-    const reportResponse = await fetch('/api/reports')
-    const { reports } = await reportResponse.json()
-
-    this.users = users
-
-    this.users.forEach(({ sessions }, idx) => {
-      sessions = sessions.map((session) => new Date(session))
-      this.users[idx].lastSession = Math.max(...sessions)
-    })
-
-    this.reports = reports.map(({ category, total }) => ({
-      tag: category,
-      value: total,
-    }))
+    this.users = await getUsers()
+    this.reports = await getReports()
 
     this.loadTheme()
   },
