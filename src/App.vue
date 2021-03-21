@@ -29,28 +29,21 @@ export default {
   name: 'app',
   components: { Header, UsersDashboard, StartupChart },
   async mounted() {
+    this.loadTheme();
     this.users = await getUsers()
     this.reports = await getReports()
 
-    this.loadTheme()
   },
   methods: {
     loadTheme() {
-      if (
-        localStorage.theme === 'dark' ||
-        (!('theme' in localStorage) &&
-          window.matchMedia('(prefers-color-scheme: dark)').matches)
-      ) {
-        document.documentElement.classList.add('dark')
-      } else {
-        document.documentElement.classList.remove('dark')
-      }
+      const isDark = localStorage.getItem('theme') === 'dark' || window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (isDark) document.documentElement.classList.add('dark');
     },
     toggleTheme() {
-      const { classList } = document.documentElement
-      if (classList.contains('dark')) localStorage.theme = ''
-      else localStorage.theme = 'dark'
-      classList.toggle('dark')
+      const isDarkActive = document.documentElement.classList.contains('dark');
+      const action = (isDarkActive) ? 'removeItem' : 'setItem';
+      localStorage[action]('theme', 'dark');
+      document.documentElement.classList.toggle('dark')
     },
   },
   data() {
